@@ -1,0 +1,7 @@
+{
+    "key": "35base"
+    ,"descrizione": "3.5 Base"
+    , "manuali":[{"descrizione":"Manuale del giocatore","key":"PH","url":"data/3.5/PH/index.json"}
+                ,{"descrizione":"Manuale del Dungeon Master","key":"DMG","url":"data/3.5/DMG/index.json"}
+                ,{"descrizione":"Manuale dei mostri","key":"MM","url":"data/3.5/MM/index.json"}]
+}
