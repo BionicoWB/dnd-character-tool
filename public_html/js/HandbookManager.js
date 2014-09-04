@@ -1,4 +1,4 @@
-var ManualiManager = {
+var HandbookManager = {
         
     definizioni : {}
 
@@ -16,19 +16,19 @@ var ManualiManager = {
 
         var manuale = $.extend(true, struct, manuale);
                 
-        ManualiManager.definizioni[manuale.key] = manuale;                
+        HandbookManager.definizioni[manuale.key] = manuale;                
     }
 
     , loadContenuto : function(key){
         
-        var manuale = ManualiManager.definizioni[key];
+        var manuale = HandbookManager.definizioni[key];
         
         for(var i=0; i<manuale.creature.length; i++){
-            BestiarioManager.load(manuale.creature[i].url);
+            CreatureManager.load(manuale.creature[i].url);
         }
         
         for(var i=0; i<manuale.listeEvocazione.length; i++){
-            EvocazioniManager.load(manuale.listeEvocazione[i].url);
+            EvocationManager.load(manuale.listeEvocazione[i].url);
         }  
         
         for(var i=0; i<manuale.plugins.length; i++){
@@ -41,7 +41,7 @@ var ManualiManager = {
         console.log("Loading - " + uri);
 
         $.getJSON(uri, function(data) {
-            ManualiManager.addManuale(data);
+            HandbookManager.addManuale(data);
             if(typeof callback === 'function'){
                 callback();
             }            

@@ -1,26 +1,28 @@
-var EvocazioniManager = {
+var EvocationManager = {
     
     listeEvocazione: {}
 
     , creatureEvocate: []
     
+    , indiceSelezionato : null
+    
     , plugins : {}
     
     , addPlugin : function(plugin){
-        Creatura.prototype[plugin.key] = plugin.action;
-        EvocazioniManager.plugins[plugin.key] = plugin;
-        EvocazioniManager.plugins[plugin.key].text = (!plugin.text ? plugin.key : plugin.text);
+        Creature.prototype[plugin.key] = plugin.action;
+        EvocationManager.plugins[plugin.key] = plugin;
+        EvocationManager.plugins[plugin.key].text = (!plugin.text ? plugin.key : plugin.text);
     }
     
     , getPlugins : function(){
-        return EvocazioniManager.plugins;
+        return EvocationManager.plugins;
     }
     
-    , applyPlugin : function(index, key){
-        console.log(' EvocazioniManager.applyPlugin - ' + key);
+    , invokePlugin : function(index, key){
+        console.log(' EvocationManager.applyPlugin - ' + key);
 
-        EvocazioniManager.creatureEvocate[index][key]();
-        EvocazioniManager.caricaCreatureEvocate();
+        EvocationManager.creatureEvocate[index][key]();
+        EvocationManager.caricaCreatureEvocate();
     }
 
     , addListaEvocazione: function(data) {
@@ -28,15 +30,15 @@ var EvocazioniManager = {
         console.debug(" Loading - " + data.key);
 
 
-        if (!EvocazioniManager.listeEvocazione[data.key]) {
+        if (!EvocationManager.listeEvocazione[data.key]) {
 
-            console.log(" Creazione EvocazioniManager.listeEvocazione." + data.key);
-
-            EvocazioniManager.listeEvocazione[data.key] = data;
+            console.log(" Creazione EvocationManager.listeEvocazione." + data.key);
+            
+            EvocationManager.listeEvocazione[data.key] = data;
 
             
         } else {
-            console.log(" Aggiornamento EvocazioniManager.listeEvocazione." + data.key);
+            console.log(" Aggiornamento EvocationManager.listeEvocazione." + data.key);
         
             for(var livello in data.livelli){
                 //ciclo ogni creatura in ogni livello
@@ -44,46 +46,47 @@ var EvocazioniManager = {
                     
                     var nome = data.livelli[livello][i];
                     //se non presente viene aggiunta
-                    if(EvocazioniManager.listeEvocazione[data.key].livelli.indexOf(nome)>=0){
-                        console.log("  Aggiunta EvocazioniManager.listeEvocazione." + data.key + "." + livello + "." + nome);
-                        EvocazioniManager.listeEvocazione[data.key].livelli.push(nome);
+                    if(EvocationManager.listeEvocazione[data.key].livelli.indexOf(nome)>=0){
+                        console.log("  Aggiunta EvocationManager.listeEvocazione." + data.key + "." + livello + "." + nome);
+                        EvocationManager.listeEvocazione[data.key].livelli.push(nome);
                     }
                 }
             }
         }
 
 
-        EvocazioniManager.listeEvocazione[data.key] = data;
+        EvocationManager.listeEvocazione[data.key] = data;
     }
 
     , caricaTipologieEvocazione: function() {
         console.log("Carico tipologie evocazione");
         
-        $.templates("#templateTipologieEvocazione").link("#pageEvocazioni div[data-role='main']", EvocazioniManager.listeEvocazione);
+        $.templates("#templateTipologieEvocazione").link("#pageEvocazioni div[data-role='main']", EvocationManager.listeEvocazione);
         $("#pageEvocazioni  div[data-role='main']").trigger("create");
     }
 
     , caricaListaLivelli: function(key) {
         console.log("Carico lista livelli - " + key);
         
-        $.templates("#templateLivelliEvocazione").link("#pageLivelliEvocazione", EvocazioniManager.listeEvocazione[key]);
+        $.templates("#templateLivelliEvocazione").link("#pageLivelliEvocazione", EvocationManager.listeEvocazione[key]);
         $("#pageLivelliEvocazione").trigger("create");
     }
 
     , evocaCreatura: function(key) {
         console.log("Evoco creatura - " + key);
         
-        EvocazioniManager.creatureEvocate.push(new Creatura(BestiarioManager.getDefinizione(key)));
-        EvocazioniManager.caricaCreatureEvocate();
+        EvocationManager.creatureEvocate.push(new Creature(key));
+        EvocationManager.caricaCreatureEvocate();
     }
 
     , rimuoviCreaturaEvocata: function(index) {
-        EvocazioniManager.creatureEvocate.splice(index, 1);
-        EvocazioniManager.caricaCreatureEvocate();
+        EvocationManager.creatureEvocate.splice(index, 1);
+        EvocationManager.caricaCreatureEvocate();
     }
 
     , caricaCreatureEvocate: function() {
-        $.templates("#templateCreaturaEvocata").link("#pageBattlefield #evocazioniAttive", EvocazioniManager.creatureEvocate);
+        
+        $.templates("#templateEvocazioniAttive").link("#pageBattlefield #evocazioniAttive", EvocationManager);
         $("#pageBattlefield").trigger("create");
     }
 
@@ -91,7 +94,7 @@ var EvocazioniManager = {
         console.log("Loading - " + uri);
 
         $.getJSON(uri, function(data) {
-            EvocazioniManager.addListaEvocazione(data);
+            EvocationManager.addListaEvocazione(data);
             if(typeof callback === 'function'){
                 callback();
             }            

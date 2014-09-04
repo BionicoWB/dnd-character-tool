@@ -1,261 +1,341 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>DnD mobile</title>
-	<link href='ext/jquery.mobile-1.4.3.min.css' type='text/css' rel='stylesheet'/>
-			
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DnD mobile</title>
+        <link href='ext/jquery.mobile-1.4.3.min.css' type='text/css' rel='stylesheet'/>
+        <link href='ext/jquery-mobile-simpledialog/jquery.mobile.simpledialog.css' type='text/css' rel='stylesheet'/>
+
         <script type='text/javascript' src='ext/jquery-1.11.1.min.js' language='JavaScript'></script>
-	<script type='text/javascript' src='ext/jquery.mobile-1.4.3.min.js' language='JavaScript'></script>
-	<script type='text/javascript' src='ext/jsviews.min.js' language='JavaScript'></script>
-            
+        <script type='text/javascript' src='ext/jquery.mobile-1.4.3.min.js' language='JavaScript'></script>
+        <script type='text/javascript' src='ext/jsviews.min.js' language='JavaScript'></script>
+        <script type='text/javascript' src='ext/jquery-mobile-simpledialog/jquery.mobile.simpledialog2.min.js' language='JavaScript'></script>
+
+        <script type='text/javascript' src='js/Collection.js' language='JavaScript'></script>
+        
         <script type='text/javascript' src='js/app.js' language='JavaScript'></script>
         <script type='text/javascript' src='js/ProfileManager.js' language='JavaScript'></script>
         <script type='text/javascript' src='js/HandbookManager.js' language='JavaScript'></script>
         <script type='text/javascript' src='js/CreatureManager.js' language='JavaScript'></script>
-	<script type='text/javascript' src='js/EvocationManager.js' language='JavaScript'></script>
-	
-	<script type='text/javascript' src='js/Creature.js' language='JavaScript'></script>
-	<script type='text/javascript' src='data/3.5/constants.js' language='JavaScript'></script>
-	<script type='text/javascript' src='data/3.5/sizes.js' language='JavaScript'></script>	
-	
-	
-	<script id="templateLivelliEvocazione" type="text/x-jsrender">
-		<div data-role="header" data-theme="b">
-			<a href="#pageEvocazioni" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
-			<h1>{{:descrizione}}</h1>
-		</div>
+        <script type='text/javascript' src='js/EvocationManager.js' language='JavaScript'></script>
+        <script type='text/javascript' src='js/SearchManager.js' language='JavaScript'></script>
 
-		<div data-role="main" class="ui-content">
-			{{props livelli}}
-				<div data-role="collapsible">			
-				<h4>Livello{{>key}} <span class="ui-li-count">{{:prop.length}}</span></h4>
-					<ul data-role="listview">
-						{{for prop}}
-							<li><a href="#pageSchedaCreatura"  onclick="javascript:BestiarioManager.caricaSchedaCreatura('{{:}}');">{{:}}</a></li>
-						{{/for}}
-					</ul>
-				</div>		
-			{{/props}}		
-		</div>	
-	</script>
-	
-	<script id="templateTipologieEvocazione" type="text/x-jsrender">
-		<ul data-role="listview">
-		{{props}}				
-			<li><a href="#pageLivelliEvocazione" onclick="javascript:EvocazioniManager.caricaListaLivelli('{{>key}}');">{{:prop.descrizione}}</a></li>										
-		{{/props}}
-		</ul>
-	</script>
+        <script type='text/javascript' src='js/Creature.js' language='JavaScript'></script>
+        <script type='text/javascript' src='data/3.5/constants.js' language='JavaScript'></script>
+        <script type='text/javascript' src='data/3.5/sizes.js' language='JavaScript'></script>	
 
-	<script id="templateCreatura" type="text/x-jsrender">
-	
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-c"><div class="ui-body ui-body-d">PF: {{:getDadiVita()}}({{:getPuntiFerita()}})</div></div>
-		</div><!-- /grid-b -->
-		
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a">
-				<div class="ui-body ui-body-e"> 
-					{{if getVelocitaTerra()}}
-						Terra {{:getVelocitaTerra()}}m -
-					{{/if}}
-					{{if getVelocitaVolo()}}
-						Volo {{:getVelocitaVolo()}}m -
-					{{/if}}						
-					{{if getVelocitaScalare()}}
-						Scalare{{:getVelocitaScalare()}}m -
-					{{/if}}			
-					{{if getVelocitaNuotare()}}
-						Nuotare {{:getVelocitaNuotare()}}m -
-					{{/if}}			
-					{{if getVelocitaScavare()}}
-						Scavare {{:getVelocitaScavare()}}m
-					{{/if}}	
-				</div>				
-			</div>
-		</div><!-- /grid-d -->
-		
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d">For./Des./Cos.(Mod.): {{:getForza()}}({{:getModificatoreForza()}})/{{:getDestrezza()}}({{:getModificatoreDestrezza()}})/{{:getCostituzione()}}({{:getModificatoreCostituzione()}})</div></div>		
-		</div><!-- /grid-b -->	
 
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d">Int./Sag./Car.(Mod.): {{:getIntelligenza()}}({{:getModificatoreIntelligenza()}})/{{:getSaggezza()}}({{:getModificatoreSaggezza()}})/{{:getCarisma()}}({{:getModificatoreCarisma()}})</div></div>		
-		</div><!-- /grid-b -->			
-		
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d"></div></div>		
-		</div><!-- /grid-b -->			
-		
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d">CA/Cont./Sprov.: {{:getClasseArmatura()}}/{{:getClasseArmaturaContatto()}}/{{:getClasseArmaturaSprovvista()}}</div></div>		
-		</div><!-- /grid-b -->		
+        <script id="templateLivelliEvocazione" type="text/x-jsrender">
+            <div data-role="header" data-theme="b">
+                <a href="#pageEvocazioni" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
+                <h1>{{:descrizione}}</h1>
+            </div>
 
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d">T/R/V(base): {{:getTiroSalvezzaTempra()}}({{:getTiroSalvezzaTempraBase()}})/{{:getTiroSalvezzaRiflessi()}}({{:getTiroSalvezzaRiflessiBase()}})/{{:getTiroSalvezzaVolonta()}}({{:getTiroSalvezzaVolontaBase()}})</div></div>
-		</div><!-- /grid-b -->			
-		
-		<div class="ui-grid-d ui-responsive">
-			<div class="ui-block-a"><div class="ui-body ui-body-d">BAB/Lotta/Sbil.: {{:getAttaccoBase()}}/{{:getBonusLotta()}}/{{:getBonusSbilanciare()}}</div></div>
-		</div><!-- /grid-b -->	
-		
-		<ul data-role="listview" data-inset="true" data-divider-theme="a">	
-			<li data-role="list-divider">Attacco in mischia</li>		
-			<li data-icon="false">
-				<div class="ui-grid-b ui-responsive">
-					<div class="ui-block-a"><div class="ui-body ui-body-d">TPC: 8</div></div>
-					<div class="ui-block-b"><div class="ui-body ui-body-d">Danno: 2d8 + 5</div></div>
-					<div class="ui-block-c"><div class="ui-body ui-body-d">Speciale: 10</div></div>
-				</div><!-- /grid-b -->			
-			</li>
-			
-			<li data-role="list-divider">Attacco a distanza</li>
-			<li data-icon="false">
-				<div class="ui-grid-b ui-responsive">
-					<div class="ui-block-a"><div class="ui-body ui-body-d">TPC: 8</div></div>
-					<div class="ui-block-b"><div class="ui-body ui-body-d">Danno: 2d8 + 5</div></div>
-					<div class="ui-block-c"><div class="ui-body ui-body-d">Speciale: 10</div></div>
-				</div><!-- /grid-b -->			
-			</li>
-			
-			<li data-role="list-divider">Capacità speciali</li>		
-			<li data-icon="false">capacità: descrizione</li>
-			<li data-icon="false">capacità: descrizione</li>
-		</ul>			
-		
-	</script>
-	
-	<script id="templateCreaturaEvocata" type="text/x-jsrender">
-		<br/>
-		<div data-role="header" class="ui-corner-all custom-corners">
-			<div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">				
-                                {{props getPlugins()}}
-                                    <a href="#" class="ui-btn ui-btn-icon-right ui-icon-{{:prop.icon}}" onclick="EvocazioniManager.applyPlugin({{:#parent.getIndex()}}, '{{:key}}');">{{:prop.text}}</a>
-                                {{/props}}
-			</div>
-			<h6>{{:getNome()}}({{:getTaglia().descrizione}})</h6>
-			<button class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-delete" onclick="EvocazioniManager.rimuoviCreaturaEvocata({{:#index}})">Delete</button>
-			
-			<div class="ui-body ui-body-a">
-				<input type="range" value="{{:getDanni()}}" min="0" max="{{:getPuntiFerita()}}" step="1" data-highlight="true">
-				{{include tmpl="#templateCreatura" /}}
-			</div>
-		</div>							
-				
+            <div data-role="main" class="ui-content">
+                {{props livelli}}
+                    <div data-role="collapsible">			
+                        <h4>Livello{{:key}} <span class="ui-li-count">{{:prop.length}}</span></h4>
+                        <ul data-role="listview">
+                            {{for prop}}
+                                {{if ~CreatureManager.hasDefinizione(#data)}}
+                                    <li><a href="#pageSchedaCreatura"  onclick="javascript:CreatureManager.caricaSchedaCreatura('{{:}}');">{{:}}</a></li>
+                                {{else}}
+                                    <li class="ui-disabled"><a href="javascript:void(0);">{{:}}</a></li>
+                                {{/if}}
+                            {{/for}}
+                        </ul>
+                    </div>		
+                {{/props}}		
+            </div>	
+        </script>
 
-	</script>	
+        <script id="templateTipologieEvocazione" type="text/x-jsrender">
+            {{props}}    
+                <a data-role="button" href="#pageLivelliEvocazione" onclick="javascript:EvocationManager.caricaListaLivelli('{{:key}}');">{{:prop.descrizione}}</a>
+            {{/props}}            
+        </script>
+        
+        <script id="templateAttaccoCreatura" type="text/x-jsrender">
+            <li data-icon="refresh"><a onclick="javascript:alert(app.dice.attack({{:tiroPerColpire}},{{:danno.numero}},{{:danno.tipo}},{{:danno.bonus}}));">{{:descrizione}} {{if tiroPerColpire>=0}}+{{/if}}{{:tiroPerColpire}} {{:danno.numero}}d{{:danno.tipo}}{{if danno.bonus>0}}+{{/if}}{{if danno.bonus!==0}}{{:danno.bonus}}{{/if}}{{if speciale}} ({{:speciale.descrizione}}){{/if}}</a></li>
+        </script>        
+
+        <script id="templateCreatura" type="text/x-jsrender">
 	
-	<script id="templateSchedaCreatura" type="text/x-jsrender">
-		<div data-role="header" data-theme="b">
-			<a href="#pageLivelliEvocazione" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
-			<h1>{{:getNome()}}({{:getTaglia().descrizione}})</h1>
-			<a href="#pageBattlefield" data-icon="power" class="ui-btn-right" data-theme="a" onclick="javascript:EvocazioniManager.evocaCreatura('{{:getNome()}}');">Evoca</a>
-		</div>		
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-c"><div class="ui-body ui-body-d">PF: {{:getDadiVita()}}({{:getPuntiFerita()}})</div></div>
+            </div><!-- /grid-b -->
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a">
+                    <div class="ui-body ui-body-e"> 
+                        {{props getVelocita()}}
+                            {{if #index > 0}} -{{/if}} {{:key}} {{:prop}}m
+                        {{/props}}
+                    </div>				
+                </div>
+            </div><!-- /grid-d -->
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d">For/Des/Cos: {{:getForza()}}({{:getModificatoreForza()}})/{{:getDestrezza()}}({{:getModificatoreDestrezza()}})/{{:getCostituzione()}}({{:getModificatoreCostituzione()}})</div></div>		
+            </div><!-- /grid-b -->	
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d">Int/Sag/Car: {{:getIntelligenza()}}({{:getModificatoreIntelligenza()}})/{{:getSaggezza()}}({{:getModificatoreSaggezza()}})/{{:getCarisma()}}({{:getModificatoreCarisma()}})</div></div>		
+            </div><!-- /grid-b -->			
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d"></div></div>		
+            </div><!-- /grid-b -->			
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d">CA/Cont/Sprov: {{:getClasseArmatura()}}/{{:getClasseArmaturaContatto()}}/{{:getClasseArmaturaSprovvista()}}</div></div>		
+            </div><!-- /grid-b -->		
+
+            {{setvar "tiroSalvezzaTempra" getTiroSalvezza("TEMPRA")/}}
+            {{setvar "tiroSalvezzaRiflessi" getTiroSalvezza("RIFLESSI")/}}
+            {{setvar "tiroSalvezzaVolonta" getTiroSalvezza("VOLONTA")/}}
+                    
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d">T/R/V: {{:~getvar('tiroSalvezzaTempra').getValore()}}({{:~getvar('tiroSalvezzaTempra').getValoreBase()}})/{{:~getvar('tiroSalvezzaRiflessi').getValore()}}({{:~getvar('tiroSalvezzaRiflessi').getValoreBase()}})/{{:~getvar('tiroSalvezzaVolonta').getValore()}}({{:~getvar('tiroSalvezzaVolonta').getValoreBase()}})</div></div>
+            </div><!-- /grid-b -->			
+
+            <div class="ui-grid-d ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d">BAB/Lotta/Sbil: {{:getAttaccoBase()}}/{{:getBonusLotta()}}/{{:getBonusSbilanciare()}}</div></div>
+            </div><!-- /grid-b -->	
+
+            <ul data-role="listview" data-inset="true" data-divider-theme="a">	
+                
+                {{if hasAttacchi("MISCHIA")}}                
+                    <li data-role="list-divider">Attacco in mischia</li>
+                    {{for getAttacchi("MISCHIA")["PRIMARIO"] tmpl="#templateAttaccoCreatura" /}}                        
+                    {{for getAttacchi("MISCHIA")["SECONDARIO"] tmpl="#templateAttaccoCreatura" /}}
+                                         
+                {{/if}}
+                
+                {{if hasAttacchi("DISTANZA")}}                  
+                    <li data-role="list-divider">Attacco a distanza</li>
+                    {{for getAttacchi("DISTANZA")["PRIMARIO"] tmpl="#templateAttaccoCreatura" /}}                        
+                    {{for getAttacchi("DISTANZA")["SECONDARIO"] tmpl="#templateAttaccoCreatura" /}}                         
+                {{/if}}                
+
+                {{if hasAttacchi("SPECIALE")}}                                                                                      
+                    <li data-role="list-divider">Attacco speciale</li>
+                    {{for getAttacchi("SPECIALE")["PRIMARIO"] tmpl="#templateAttaccoCreatura" /}}                        
+                    {{for getAttacchi("SPECIALE")["SECONDARIO"] tmpl="#templateAttaccoCreatura" /}}                        
+                {{/if}}                    
+
+            </ul>			
 		
-		<div data-role="main" class="ui-content">{{include tmpl="#templateCreatura" /}}</div>
-	</script>		
-	
-	<script>	
-		$(function(){
-			
-			$( "[data-role='footer']" ).toolbar();
-			
-                        app.init();
-				
-		});	
-		
-	</script>
-	
-</head>
+        </script>
+
+        <script id="templateCreaturaEvocata" type="text/x-jsrender">
+            <br/>
+            <div data-role="header" class="ui-corner-all custom-corners">
+                <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">
+                
+                    <a href="#popupMenuCreaturaEvocata" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a" onclick="EvocationManager.indiceSelezionato = {{:#getIndex()}};">Actions</a>
+
+            
+                </div>
+                <h6>{{:getNome()}}({{:getTaglia().descrizione}})</h6>
+                <button class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-delete" onclick="confirm('rimuovere la creatura evocata?',function(){EvocationManager.rimuoviCreaturaEvocata({{:#index}});});">Delete</button>
+
+                <div class="ui-body ui-body-a">
+                    <input type="range" value="{{:getDanni()}}" min="0" max="{{:getPuntiFerita()}}" step="1" data-highlight="true"/>
+                    {{include tmpl="#templateCreatura" /}}
+                </div>
+            </div>
+        </script>
+        
+        <script id="templateEvocazioniAttive" type="text/x-jsrender">
+            {{for creatureEvocate tmpl="#templateCreaturaEvocata"/}}
+
+            <div data-role="popup" id="popupMenuCreaturaEvocata" data-theme="a">
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li data-role="list-divider">Seleziona</li>                    
+                        {{props plugins}}                                    
+                            <li><a href="#" onclick="EvocationManager.invokePlugin(EvocationManager.indiceSelezionato, '{{:key}}');">{{:prop.text}}</a></li>
+                        {{/props}}                                                                
+                    </ul>
+            </div>                                                                                            
+        </script>        
+        
+
+        <script id="templateSchedaCreatura" type="text/x-jsrender">
+            <div data-role="header" data-theme="b">
+                <a href="#pageLivelliEvocazione" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
+                <h1>{{:getNome()}}({{:getTaglia().descrizione}})</h1>
+                <a href="#pageBattlefield" data-icon="power" class="ui-btn-right" data-theme="a" onclick="javascript:EvocationManager.evocaCreatura('{{:getNome()}}');">Evoca</a>
+            </div>		
+
+            <div data-role="main" class="ui-content">{{include tmpl="#templateCreatura" /}}</div>
+        </script>	
+        
+        <script id="templateRisultatiRicercaCreature" type="text/x-jsrender">
+            <ul data-role="listview">
+            {{for items}}
+                {{if ~CreatureManager.hasDefinizione(#data.nome)}}
+                    <li><a href="#pageSchedaCreatura"  onclick="javascript:CreatureManager.caricaSchedaCreatura('{{:#data.nome}}');">{{:#data.nome}}</a></li>
+                {{else}}
+                    <li class="ui-disabled"><a href="javascript:void(0);">{{:#data.nome}}</a></li>
+                {{/if}}   
+            {{/for}}
+            </ul>
+        </script>
+        
+        <script id="templateRicercaCreature" type="text/x-jsrender">
+            {{setvar "rangeDadiVita" ~CreatureManager.find.rangeDadiVita()/}}
+            {{setvar "rangeTaglia" ~CreatureManager.find.rangeTaglia()/}}
+            
+            <form data-ajax="false" onsubmit="SearchManager.search.creature(this); return false;">
+                <input type="text" name="text" placeholder="text"/>
+
+                <div data-role="rangeslider" name="range-dadi-vita">
+                    <label>Dadi vita:</label>
+                    <input type="range" name="dadiVitaMin" min="{{:~getvar('rangeDadiVita')[0]}}" max="{{:~getvar('rangeDadiVita')[1]}}" value="{{:~getvar('rangeDadiVita')[0]}}"/>
+                    <input type="range" name="dadiVitaMax" min="{{:~getvar('rangeDadiVita')[0]}}" max="{{:~getvar('rangeDadiVita')[1]}}" value="{{:~getvar('rangeDadiVita')[1]}}"/>
+                </div>
+
+                <label>Taglia:</label>
+
+                <input name="lblTagliaMin" readonly="readonly"/>                    
+                <div data-role="rangeslider" name="range-taglia">                        
+                    <input type="range" name="tagliaMin" min="{{:~getvar('rangeTaglia')[0]}}" max="{{:~getvar('rangeTaglia')[1]}}" value="{{:~getvar('rangeTaglia')[0]}}" style="display:none;"/>
+                    <input type="range" name="tagliaMax" min="{{:~getvar('rangeTaglia')[0]}}" max="{{:~getvar('rangeTaglia')[1]}}" value="{{:~getvar('rangeTaglia')[1]}}" style="display:none;"/>
+                </div>
+                <input name="lblTagliaMax" readonly="readonly"/>                                      
+
+                <input type="submit" value="Submit"/>
+            </form>  
+        </script>        
+
+        <script>
+            $(function() {
+
+                $("[data-role='footer']").toolbar();
+
+                app.init();
+
+            });
+
+        </script>
+
+    </head>
 
     <body>
 
-		<div data-role="page" id="setup">
-			<div data-role="header" data-theme="b">
-				<h1>Setup</h1>
-			</div>
+        <div data-role="page" id="setup">
+            <div data-role="header" data-theme="b">
+                <h1>Setup</h1>
+            </div>
 
-			<div data-role="main" class="ui-content">
-				<ul data-role="listview">
-                                    <li><a href="#">Under contruction</a></li>				
-				</ul>				
-			</div>
+            <div data-role="main" class="ui-content">
+                <ul data-role="listview">
+                    <li><a href="#">Under contruction</a></li>				
+                    
+                </ul>	
+                
+            </div>
 
-		</div> 	        
+        </div> 	        
+
+        <div data-role="page" id="tools">
+            <div data-role="header" data-theme="b">
+                <h1>Tools</h1>
+            </div>
+
+            <a data-role="button" href="#pageEvocazioni" onclick="javascript:EvocationManager.caricaTipologieEvocazione();">Evocazioni</a>
+
+        </div> 		
+
+        <div data-role="page" id="pageBattlefield">
+            <div data-role="header" data-theme="b" data-position="fixed">		
+                <h3>Battlefield</h3>
+            </div>
+
+            <div data-role="tabs" id="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#evocazioniAttive" data-ajax="false">Evocazioni</a></li>
+                        <li><a href="#incantamenti" data-ajax="false">Incantamenti</a></li>
+                        <li><a href="#famiglio" data-ajax="false">Famiglio</a></li>
+                        <li><a href="#compagnoAnimale" data-ajax="false">Compagno animale</a></li>				  
+                    </ul>
+                </div>
+                <div id="evocazioniAttive"></div>
+                <div id="incantamenti" class="ui-content">
+                    <ul data-role="listview" data-inset="true" data-divider-theme="a">		
+                        <li data-icon="delete"><a href="#">Under construction</a></li>
+                    </ul>				
+                </div>
+                <div id="famiglio">
+                    <h3 class="ui-bar ui-bar-a ui-corner-all">Heading</h3>
+                    <div class="ui-body ui-body-a ui-corner-all">
+                        <p>Under construction</p>
+                    </div>
+
+                </div>
+                <div id="compagnoAnimale">Under construction</div>			  
+            </div>			
+
+        </div>		
+
+        <div data-role="page" id="pageEvocazioni">
+            <div data-role="header" data-theme="b">
+                <a href="#home" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
+                <h1>Evocazioni</h1>
+            </div>
+
+            <div data-role="main" class="ui-content"></div>
+
+        </div> 	    
+
+        <div data-role="page" id="pageLivelliEvocazione"></div>		
+
+        <div data-role="page" id="pageSchedaCreatura"></div> 		
+
+        <div data-role="page" id="search">
+            <div data-role="header" data-theme="b">                
+                <h1>Search</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <a data-role="button" href="#searchForm" onclick="SearchManager.caricaPaginaRicerca('#templateRicercaCreature');">Creature</a>
+            </div>
+
+        </div>
         
-		<div data-role="page" id="tools">
-			<div data-role="header" data-theme="b">
-				<h1>Tools</h1>
-			</div>
+        <div data-role="page" id="searchResults">
+            <div data-role="header" data-theme="b">
+                <a href="#searchForm" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
+                <h1>Results</h1>
+            </div>
 
-			<div data-role="main" class="ui-content">
-				<ul data-role="listview">
-                                    <li><a href="#pageEvocazioni" onclick="javascript:EvocazioniManager.caricaTipologieEvocazione();">Evocazioni</a></li>				
-				</ul>				
-			</div>
+            <div data-role="main" class="ui-content"></div>
 
-		</div> 		
-		
-		<div data-role="page" id="pageBattlefield">
-			<div data-role="header" data-theme="b" data-position="fixed">		
-				<h3>Battlefield</h3>
-			</div>
+        </div>         
+        
+        <div data-role="page" id="searchForm">
+            <div data-role="header" data-theme="b">
+                <a href="#search" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
+                <h1>Search criteria</h1>
+            </div>
 
-			<div data-role="tabs" id="tabs">
-			  <div data-role="navbar">
-				<ul>
-                                  <li><a href="#evocazioniAttive" data-ajax="false">Evocazioni</a></li>
-				  <li><a href="#incantamenti" data-ajax="false">Incantamenti</a></li>
-				  <li><a href="#famiglio" data-ajax="false">Famiglio</a></li>
-				  <li><a href="#compagnoAnimale" data-ajax="false">Compagno animale</a></li>				  
-				</ul>
-			  </div>
-			  <div id="evocazioniAttive"></div>
-                          <div id="incantamenti" class="ui-content">
-				<ul data-role="listview" data-inset="true" data-divider-theme="a">		
-					<li data-icon="delete"><a href="#">Under construction</a></li>
-				</ul>				
-			  </div>
-			  <div id="famiglio">
-				<h3 class="ui-bar ui-bar-a ui-corner-all">Heading</h3>
-				<div class="ui-body ui-body-a ui-corner-all">
-					<p>Under construction</p>
-				</div>
-			  
-			  </div>
-			  <div id="compagnoAnimale">Under construction</div>			  
-			</div>			
-			
-		</div>		
-		
-		<div data-role="page" id="pageEvocazioni">
-			<div data-role="header" data-theme="b">
-				<a href="#home" data-icon="back" class="ui-btn-left" data-theme="a">Back</a>
-				<h1>Evocazioni</h1>
-			</div>
+            <div data-role="main" class="ui-content"></div>
 
-			<div data-role="main" class="ui-content"></div>
+        </div>         
 
-		</div> 	    
-	
-		<div data-role="page" id="pageLivelliEvocazione"></div>		
-
-		<div data-role="page" id="pageSchedaCreatura"></div> 		
-
-    
-		<div data-role="footer" data-position="fixed" data-theme="b">
-			<div data-role="navbar">
-				<ul>
-                                    <li><a href="#setup" data-icon="gear">Setup</a></li>	
-                                    <li><a href="#tools" data-icon="home">Tools</a></li>
-                                    <li><a href="#pageBattlefield" data-icon="star" class="ui-btn-active">Battlefield</a></li>
-				</ul>
-			</div><!-- /navbar -->
-		</div><!-- /footer -->
-	
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#setup" data-icon="gear">Setup</a></li>	
+                    <li><a href="#tools" data-icon="home">Tools</a></li>
+                    <li><a href="#search" data-icon="search">Search</a></li>
+                    <li><a href="#pageBattlefield" data-icon="star" class="ui-btn-active">Battlefield</a></li>
+                </ul>
+            </div><!-- /navbar -->
+        </div><!-- /footer -->	               
+   
     </body>
-    
-
 
 </html>

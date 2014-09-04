@@ -1,4 +1,4 @@
-var ProfiliManager = {
+var ProfileManager = {
   
     definizioni : {}
     
@@ -13,15 +13,15 @@ var ProfiliManager = {
 
         var profilo = $.extend(true, struct, profilo);
                 
-        ProfiliManager.definizioni[profilo.key] = profilo;        
+        ProfileManager.definizioni[profilo.key] = profilo;        
     }
     
     , loadContenuto : function(key){
         
-        var profilo = ProfiliManager.definizioni[key];
+        var profilo = ProfileManager.definizioni[key];
         
         for(var i=0; i<profilo.manuali.length; i++){            
-            ManualiManager.load(profilo.manuali[i].url, function(key){return function(){ManualiManager.loadContenuto(key);};}(profilo.manuali[i].key));
+            HandbookManager.load(profilo.manuali[i].url, function(key){return function(){HandbookManager.loadContenuto(key);};}(profilo.manuali[i].key));
         }
                        
         
@@ -31,7 +31,7 @@ var ProfiliManager = {
         console.log("Loading - " + uri);
 
         $.getJSON(uri, function(data) {
-            ProfiliManager.addProfilo(data);
+            ProfileManager.addProfilo(data);
             if(typeof callback === 'function'){
                 callback();
             }            
