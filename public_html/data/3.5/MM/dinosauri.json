@@ -1,0 +1,134 @@
+{
+	"Deinonico":{
+		"caratteristiche":{ "FORZA":19 , "DESTREZZA":15 , "COSTITUZIONE":19 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":4 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 18 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 5,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+                    "MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Speroni", "danno":{"numero":1,"tipo":8}}                                    
+                                ]
+                                                       
+                            }
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio anteriore", "danno":{"numero":1,"tipo":3}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Artiglio anteriore", "danno":{"numero":1,"tipo":3}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":2,"tipo":4}}  
+                                ]
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }		
+	}
+	
+	, "Megaraptor":{
+		"caratteristiche":{ "FORZA":21 , "DESTREZZA":15 , "COSTITUZIONE":21 , "INTELLIGENZA":3 , "SAGGEZZA":15 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":8 , "tipo":8 },
+		
+		"velocita" :{"TERRA": 18},
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 6,
+		
+		"attaccoBase" :6,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Sperone", "danno":{"numero":2,"tipo":6}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Sperone", "danno":{"numero":2,"tipo":6}}   
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}   							
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}} 
+                                
+                                ]                            
+                        }                    			
+		}
+         
+		,"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":6 , "VOLONTA":2 }
+		,"talenti":[
+			{"key":"Correre"}
+			,{"key":"Robustezza"}
+			,{"key":"Seguire Tracce"}
+		]
+	}  
+
+	, "Tirannosauro":{
+		"caratteristiche":{ "FORZA":28 , "DESTREZZA":12 , "COSTITUZIONE":21 , "INTELLIGENZA":3 , "SAGGEZZA":15 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":18 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 5,
+		
+		"attaccoBase" :13,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":3,"tipo":6}}	                                   
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":11 , "RIFLESSI":11 , "VOLONTA":5 }	
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Attacco Naturale Migliorato","parameter":["Morso"]}
+			,{"key":"Correre"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Seguire Tracce"}
+		]
+	}
+
+	, "Triceratopo":{
+		"caratteristiche":{ "FORZA":30 , "DESTREZZA":9 , "COSTITUZIONE":25 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":7 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":9 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 11,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Corno", "danno":{"numero":2,"tipo":8}}	                                   
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":10 , "RIFLESSI":10 , "VOLONTA":5 }	
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Tempra Possente"}
+		]
+	}
+	
+	
+}

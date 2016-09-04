@@ -1,0 +1,201 @@
+{
+	"Cinghiale crudele":{
+		"caratteristiche":{ "FORZA":27 , "DESTREZZA":10 , "COSTITUZIONE":17 , "INTELLIGENZA":3 , "SAGGEZZA":13 , "CARISMA":8 },
+		
+		"dadiVita":{ "numero":7 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 6,
+		
+		"attaccoBase" :5,
+		
+		"attacchi" :{
+                        "MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Corno", "danno":{"numero":1,"tipo":8}}                                       
+                                ]
+                                                       
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":7 }	
+	}	
+	
+	, "Donnola crudele":{
+		"caratteristiche":{ "FORZA":14 , "DESTREZZA":19 , "COSTITUZIONE":10 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 2,
+		
+		"attaccoBase" :4,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}
+                                ]                            
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }					
+	}
+
+	, "Lupo crudele":{
+		"caratteristiche":{ "FORZA":25 , "DESTREZZA":15 , "COSTITUZIONE":17 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":6 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":15 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :4,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}   }                                    				
+                                ]                            
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":5 }					
+	}
+
+	, "Orso crudele":{
+		"caratteristiche":{ "FORZA":31 , "DESTREZZA":13 , "COSTITUZIONE":19 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":12 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :9,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":2,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":2,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":2,"tipo":8}}	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":8 , "RIFLESSI":8 , "VOLONTA":8 }
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Focalizzata","parameter":["Artiglio"]}
+			,{"key":"Correre"}
+			,{"key":"Resistenza Fisica"}
+			,{"key":"Robustezza"}
+
+		]
+	}
+
+	, "Pipistrello crudele":{
+		"caratteristiche":{ "FORZA":17 , "DESTREZZA":22 , "COSTITUZIONE":17 , "INTELLIGENZA":3 , "SAGGEZZA":14 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":4 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":6 , "VOLO":12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 5,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}                                				
+                                ]
+                            
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":4 }
+	}		
+
+	, "Tasso crudele":{
+		"caratteristiche":{ "FORZA":14 , "DESTREZZA":17 , "COSTITUZIONE":19 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":9 , "SCAVARE":3 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":6}}	
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":3 }		
+	}
+
+	, "Tigre crudele":{
+		"caratteristiche":{ "FORZA":27 , "DESTREZZA":15 , "COSTITUZIONE":17 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 6,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":2,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":2,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":2,"tipo":6}}	
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":10 , "RIFLESSI":10 , "VOLONTA":10 }	
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Focalizzata","parameter":["Artiglio"]}
+			,{"key":"Attacco Naturale Migliorato","parameter":["Artiglio"]}
+			,{"key":"Attacco Naturale Migliorato","parameter":["Morso"]}
+			,{"key":"Correre"}
+			,{"key":"Furtivo"}
+		]
+	}	
+
+	
+}

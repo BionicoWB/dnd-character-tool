@@ -1,0 +1,13 @@
+{
+    "key": "PH"
+    ,"desrizione":"Manuale del giocatore"
+    ,"listeEvocazione":[{"descrizione":"Evoca mostri","url":"data/3.5/PH/evocaMostri.json"}
+        ,{"descrizione":"Evoca alleato naturale","url":"data/3.5/PH/evocaAlleatoNaturale.json"}]
+    ,"creature":[]
+    , "plugins":[{"descrizione":"Aumentare Evocazione","url":"data/3.5/PH/plugins/talenti/aumentareEvocazione.js"}
+                ,{"descrizione":"Riflessi fulminei","url":"data/3.5/PH/plugins/talenti/riflessiFulminei.js"}
+                ,{"descrizione":"Tempra possente","url":"data/3.5/PH/plugins/talenti/tempraPossente.js"}
+                ,{"descrizione":"Volontà di ferro","url":"data/3.5/PH/plugins/talenti/volontaDiFerro.js"}
+                ,{"descrizione":"Arma accurata","url":"data/3.5/PH/plugins/talenti/armaAccurata.js"}
+                ,{"descrizione":"Arma focalizzata","url":"data/3.5/PH/plugins/talenti/armaFocalizzata.js"}]
+}

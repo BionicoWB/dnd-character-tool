@@ -1,0 +1,13 @@
+{
+    "key": "MM"
+    ,"desrizione":"Manuale dei mostri"
+    ,"listeEvocazione":[]
+    ,"creature":[{"descrizione":"Animali","url":"data/3.5/MM/animali.json"}
+		  ,{"descrizione":"Animali crudeli","url":"data/3.5/MM/animaliCrudeli.json"}
+		  ,{"descrizione":"Creature","url":"data/3.5/MM/creature.json"}
+ 		  ,{"descrizione":"Dinosauri","url":"data/3.5/MM/dinosauri.json"}
+		  ,{"descrizione":"Elementali","url":"data/3.5/MM/elementali.json"}]
+    , "plugins":[{"descrizione":"Variazione taglia","url":"data/3.5/MM/plugins/variazioneTaglia.js"}
+                  ,{"descrizione":"Arma naturale","url":"data/3.5/MM/plugins/armaNaturale.js"}
+                  ,{"descrizione":"Multiattacco","url":"data/3.5/MM/plugins/talenti/multiattacco.js"}]
+}

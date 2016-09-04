@@ -1,0 +1,20 @@
+{
+    "key":"EVOCA_ALLEATO_NATURALE"
+    , "descrizione" : "Evoca alleato naturale"
+    , "livelli":{
+        "1": ["Aquila","Focena","Gufo","Lupo","Piovra","Scimmia","Serpente","Serpente, vipera piccola","Topo crudele"]
+        ,"2": ["Coccodrillo","Elementale dell'acqua, piccolo","Elementale dell'aria, piccolo","Elementale del fuoco, piccolo"
+                ,"Elementale della terra, piccolo","Ghiottone","Ippogrifo","Orso nero","Pipistrello crudele","Serpente, vipera media"
+                ,"Seppia","Squalo medio","Tasso crudele"]
+        ,"3": ["Aquila gigante [NB]","Donnola crudele","Gorilla","Gufo gigante","Leone","Lupo crudele","Satiro [CN; senza flauto]","Serpente strangolatore"
+                ,"Serpente, vipera grande","Squalo grande","Thoqqua"]
+        ,"4": ["Cinghiale crudele","Coccodrillo gigante","Deinonico","Elementale dell'acqua, Medio","Elementare dell'aria, Medio","Elementale del fuoco, Medio"
+                ,"Elementale della terra, Medio","Falcofreccia giovane","Gatto di mare","Ghiottone crudele","Gorilla crudele","Orso bruno"
+                ,"Salamandra delle fiamme [NM]","Serpente, vipera Enorme","Squalo Enorme","Tigre","Tojanida giovane","Unicorno","Xorn minore"]
+        ,"5": []
+        ,"6": ["Orso crudele"]
+        ,"7": []
+        ,"8": []
+        ,"9": []
+    }
+}

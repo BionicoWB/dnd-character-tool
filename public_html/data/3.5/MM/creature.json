@@ -1,0 +1,397 @@
+{
+	
+	"Cacciatore invisibile":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":19 , "COSTITUZIONE":14 , "INTELLIGENZA":14 , "SAGGEZZA":15 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":8 , "tipo":8 },
+		
+		"velocita" :{"TERRA":9,"VOLARE":9},
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :6,
+		
+		"attacchi" :{
+                        "MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":6}}
+                                ]
+                                                       
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":2 , "RIFLESSI":6 , "VOLONTA":2 }	
+		
+		,"talenti":[
+			{"key":"Arma focalizzata","parameter":["Schianto"]}
+			,{"key":"Iniziativa migliorata"}
+			,{"key":"Riflessi in combattimento"}
+		]
+	}	
+	
+	, "Djinni (Genio)":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":19 , "COSTITUZIONE":14 , "INTELLIGENZA":14 , "SAGGEZZA":15 , "CARISMA":15 },
+		
+		"dadiVita":{ "numero":7 , "tipo":8 },
+		
+		"velocita" :{"TERRA":6,"VOLARE":18},
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :7,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":1,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":1,"tipo":8}}
+                                ]                            
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":5 }	
+		,"talenti":[
+			{"key":"Incantare in combattimento"}
+			,{"key":"Iniziativa migliorata"}
+			,{"key":"Riflessi in combattimento"}
+			,{"key":"Schivare"}
+		]		
+	}	
+	
+	, "Falcofreccia anziano":{
+		"caratteristiche":{ "FORZA":22 , "DESTREZZA":21 , "COSTITUZIONE":16 , "INTELLIGENZA":10 , "SAGGEZZA":13 , "CARISMA":13 },
+		
+		"dadiVita":{ "numero":15 , "tipo":8 },
+		
+		"velocita" :{	"VOLARE": 18 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 8,
+		
+		"attaccoBase" :15,
+		
+		"attacchi" :{
+			"MISCHIA" : {                            
+                        "PRIMARIO":[
+							{"naturaArma":"NATURALE", "descrizione":"Morso" , "danno":{"numero":2,"tipo":6} }
+							]
+                 }
+			,"DISTANZA" : {                            
+                            "PRIMARIO":[
+								{"naturaArma":"NATURALE", "descrizione":"Raggio di elettricita", "danno":{"numero":2,"tipo":8} }	
+						]
+                }
+		}
+                
+        ,"talenti":[{"key":"Arma accurata"}]
+		
+		,"tiriSalvezza":{ "TEMPRA":9 , "RIFLESSI":9 , "VOLONTA":9 }		
+		
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Accurata"}
+			,{"key":"Attacco in Volo"}
+			,{"key":"Arma Focalizzata","parameter":["Morso"]}
+			,{"key":"Combattere alla Cieca"}
+			,{"key":"Riflessi in Combattimento"}		
+			,{"key":"Schivare"}		
+		]
+	}
+	
+	, "Falcofreccia giovane":{
+		"caratteristiche":{ "FORZA":12 , "DESTREZZA":21 , "COSTITUZIONE":12 , "INTELLIGENZA":10 , "SAGGEZZA":13 , "CARISMA":13 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"VOLARE": 18 },
+		
+		"taglia" : "PICCOLA",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+			"MISCHIA" : {                            
+                            "PRIMARIO":[
+						{"naturaArma":"NATURALE", "descrizione":"Morso" , "danno":{"numero":1,"tipo":6} }
+					]
+                        }
+			,"DISTANZA" : {                            
+                            "PRIMARIO":[
+						{"naturaArma":"NATURALE", "descrizione":"Raggio di elettricita", "danno":{"numero":2,"tipo":6} }
+					]
+                        }
+		}
+                
+        ,"talenti":[{"key":"Arma accurata"}]
+		
+		,"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":3 }				
+	}
+	
+	, "Girallon":{
+		"caratteristiche":{ "FORZA":22 , "DESTREZZA":17 , "COSTITUZIONE":14 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":7 },
+		
+		"dadiVita":{ "numero":7 , "tipo":10 },
+		
+		"velocita" :{	"TERRA":12 , "SCALARE":12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :7,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+                                    ,{"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":2 }	
+		,"talenti":[
+			{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+			,{"key":"Volontà di Ferro"}
+		]		
+	}
+	
+	, "Ippogrifo":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":15 , "COSTITUZIONE":16 , "INTELLIGENZA":3 , "SAGGEZZA":13 , "CARISMA":8 },
+		
+		"dadiVita":{ "numero":3 , "tipo":10 },
+		
+		"velocita" :{	"TERRA":15 , "VOLO":30 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":1 }	
+	}
+	
+	, "Pixie (spiritello)":{
+		"caratteristiche":{ "FORZA":7 , "DESTREZZA":18 , "COSTITUZIONE":11 , "INTELLIGENZA":16 , "SAGGEZZA":15 , "CARISMA":16 },
+		
+		"dadiVita":{ "numero":1 , "tipo":6 },
+		
+		"velocita" :{	"TERRA":6,"VOLARE":18 },
+		
+		"taglia" : "PICCOLA",
+		
+		"armaturaNaturale" : 1,
+		
+		"attaccoBase" :0,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"MANUFATTA", "descrizione":"Spada corta", "danno":{"numero":1,"tipo":4}}                                   				
+                                ]                            
+                        }  
+			,"DISTANZA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"MANUFATTA", "descrizione":"Arco lungo", "danno":{"numero":1,"tipo":6}}                                   				
+                                ]                            
+                        } 			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":0 , "RIFLESSI":2 , "VOLONTA":2 }		
+		
+		,"talenti":[
+			{"key":"Arma Accurata"}
+			,{"key":"Schivare"}
+		]
+	}
+
+	, "Salamandra comune":{
+		"caratteristiche":{ "FORZA":14 , "DESTREZZA":13 , "COSTITUZIONE":14 , "INTELLIGENZA":14 , "SAGGEZZA":15 , "CARISMA":13 },
+		
+		"dadiVita":{ "numero":9 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":6},
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :9,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"MANUFATTA", "descrizione":"Lancia", "danno":{"numero":1,"tipo":8}}                                   				
+                                ]
+							,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Colpo di coda", "danno":{"numero":2,"tipo":6}}                                   				
+                                ] 
+                        }  			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":6 , "RIFLESSI":6 , "VOLONTA":6 }		
+		
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Attacco Poderoso"}
+			,{"key":"Multiattacco"}
+		]
+	}
+	
+	, "Satiro [CN; senza flauto]":{
+		"caratteristiche":{ "FORZA":10 , "DESTREZZA":13 , "COSTITUZIONE":12 , "INTELLIGENZA":12 , "SAGGEZZA":13 , "CARISMA":13 },
+		
+		"dadiVita":{ "numero":5 , "tipo":6 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Colpo di testa", "danno":{"numero":1,"tipo":6}}                                   				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE",  "descrizione":"Pugnale", "danno":{"numero":1,"tipo":4}}  
+                                ]
+                        }  
+			,"DISTANZA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"MANUFATTA", "descrizione":"Arco corto", "danno":{"numero":1,"tipo":6}}                                   				
+                                ]                            
+                        } 			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":1 , "RIFLESSI":4 , "VOLONTA":4 }					
+	}
+ 
+	, "Thoqqua":{
+		"caratteristiche":{ "FORZA":15 , "DESTREZZA":13 , "COSTITUZIONE":13 , "INTELLIGENZA":6 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 18 , "SCAVARE": 6 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+                        "MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":1,"tipo":6}}    
+                                ]
+                                                       
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":7 , "RIFLESSI":5 , "VOLONTA":2 }			
+	}
+
+	, "Xorn anziano":{
+		"caratteristiche":{ "FORZA":25 , "DESTREZZA":10 , "COSTITUZIONE":19 , "INTELLIGENZA":10 , "SAGGEZZA":11 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":15 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":6, "SCAVARE":6 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 16,
+		
+		"attaccoBase" :14,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":4,"tipo":8}}	                                   
+                                ]
+							,"SECONDARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":9 , "RIFLESSI":9 , "VOLONTA":9 }	
+		,"talenti":[
+			{"key":"Attacco Poderoso"}
+			,{"key":"Colpo Terrificante"}
+			,{"key":"Incalzare"}
+			,{"key":"Incalzare Potenziato"}
+			,{"key":"Multiattacco"}
+			,{"key":"Robustezza"}
+			,{"key":"Spingere Migliorato"}
+		]
+	}
+
+	, "Xorn comune":{
+		"caratteristiche":{ "FORZA":17 , "DESTREZZA":10 , "COSTITUZIONE":15 , "INTELLIGENZA":10 , "SAGGEZZA":11 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":7 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":6, "SCAVARE":6 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 14,
+		
+		"attaccoBase" :8,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":4,"tipo":6}}	                                   
+                                ]
+							,"SECONDARIO":[
+									{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":5 }	
+		,"talenti":[
+			{"key":"Attacco Poderoso"}
+			,{"key":"Incalzare"}
+			,{"key":"Multiattacco"}
+			,{"key":"Robustezza"}
+		]
+	}		
+}

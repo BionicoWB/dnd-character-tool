@@ -1,0 +1,289 @@
+{
+        "Elementale dell'acqua, Enorme":{
+		"caratteristiche":{ "FORZA":24 , "DESTREZZA":18 , "COSTITUZIONE":21 , "INTELLIGENZA":6 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 9,"NUOTARE":36 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 9,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":10 , "RIFLESSI":5 , "VOLONTA":5 }
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Attacco Poderoso"}
+			,{"key":"Incalzare"}
+			,{"key":"Incalzare Potenziato"}
+			,{"key":"Spingere Migliorato"}
+			,{"key":"Volontà di ferro"}
+                ]
+	}
+
+	, "Elementale dell'acqua, Maggiore":{
+		"caratteristiche":{ "FORZA":26 , "DESTREZZA":20 , "COSTITUZIONE":21 , "INTELLIGENZA":8 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":21 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 9,"NUOTARE":36 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 9,
+		
+		"attaccoBase" :15,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":12 , "RIFLESSI":7 , "VOLONTA":7 }
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Attacco Poderoso"}
+			,{"key":"Incalzare"}
+			,{"key":"Incalzare Potenziato"}
+			,{"key":"Riflessi Fulminei"}
+			,{"key":"Spezzare Migliorato"}
+			,{"key":"Spingere Migliorato"}
+			,{"key":"Volontà di ferro"}
+                ]
+	}
+	
+	, "Elementale dell'acqua, Medio":{
+		"caratteristiche":{ "FORZA":16 , "DESTREZZA":12 , "COSTITUZIONE":17 , "INTELLIGENZA":4 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":4 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 6 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 8,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":1,"tipo":8}}                                    
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":1 , "VOLONTA":1 }				
+	}
+
+	, "Elementale dell’aria, Enorme":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":29 , "COSTITUZIONE":18 , "INTELLIGENZA":6 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{"VOLARE":30 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":10 , "VOLONTA":5}
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Accurata"}						
+			,{"key":"Attacco rapido"}
+			,{"key":"Attacco in volo"}
+			,{"key":"Iniziativa Migliorata"}
+			,{"key":"Mobilità"}
+			,{"key":"Riflessi in Combattimento"}
+			,{"key":"Schivare"}			
+		]
+	}
+	
+	, "Elementale dell’aria, Maggiore":{
+		"caratteristiche":{ "FORZA":20 , "DESTREZZA":31 , "COSTITUZIONE":18 , "INTELLIGENZA":8 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":21 , "tipo":8 },
+		
+		"velocita" :{"VOLARE":30 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 8,
+		
+		"attaccoBase" :15,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":7 , "RIFLESSI":12 , "VOLONTA":7 }
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Attacco Poderoso"}			
+			,{"key":"Iniziativa migliorata"}
+			,{"key":"Arma accurata"}
+			,{"key":"Attacco rapido"}
+			,{"key":"Volontà di ferro"}			
+			,{"key":"Attacco in volo"}
+			,{"key":"Combattere alla Cieca"}
+			,{"key":"Mobilità"}
+			,{"key":"Riflessi in Combattimento"}
+                ]
+	}
+
+	, "Elementale del fuoco, Enorme":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":25 , "COSTITUZIONE":18 , "INTELLIGENZA":6 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 18 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":10 , "VOLONTA":5 }
+		
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Accurata"}
+			,{"key":"Attacco rapido"}		
+			,{"key":"Iniziativa Migliorata"}
+			,{"key":"Mobilità"}			
+			,{"key":"Riflessi in Combattimento"}
+			,{"key":"Schivare"}
+			,{"key":"Volontà di ferro"}
+                ]
+	}
+	
+	, "Elementale del fuoco, Maggiore":{
+		"caratteristiche":{ "FORZA":20 , "DESTREZZA":27 , "COSTITUZIONE":18 , "INTELLIGENZA":6 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":21 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 18 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 8,
+		
+		"attaccoBase" :15,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":7 , "RIFLESSI":12 , "VOLONTA":7 }
+		
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Arma Accurata"}
+			,{"key":"Arma Focalizzata","parameter":["Schianto"]}
+			,{"key":"Attacco rapido"}
+			,{"key":"Combattere alla Cieca"}			
+			,{"key":"Iniziativa Migliorata"}
+			,{"key":"Mobilità"}			
+			,{"key":"Riflessi in Combattimento"}
+			,{"key":"Schivare"}
+			,{"key":"Volontà di ferro"}
+                ]
+	}
+
+	, "Elementale della terra, Enorme":{
+		"caratteristiche":{ "FORZA":29 , "DESTREZZA":8 , "COSTITUZIONE":21 , "INTELLIGENZA":6 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":16 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 9 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 11,
+		
+		"attaccoBase" :12,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":10 , "RIFLESSI":5 , "VOLONTA":5 }
+		
+		,"talenti":[
+			{"key":"Attacco Poderoso"}
+			,{"key":"Colpo Terrificante"}
+			,{"key":"Incalzare"}
+			,{"key":"Incalzare Potenziato"}
+			,{"key":"Spingere Migliorato"}
+			,{"key":"Volontà di Ferro"}
+                ]
+	}
+	
+	, "Elementale della terra, Maggiore":{
+		"caratteristiche":{ "FORZA":31 , "DESTREZZA":8 , "COSTITUZIONE":21 , "INTELLIGENZA":8 , "SAGGEZZA":11 , "CARISMA":11 },
+		
+		"dadiVita":{ "numero":21 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 9 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 13,
+		
+		"attaccoBase" :15,
+		
+		"attacchi" :{
+                        "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+									,{"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":10}}
+                                ]                            		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":12 , "RIFLESSI":7 , "VOLONTA":7 }
+		
+		,"talenti":[
+			{"key":"Attacco Poderoso"}
+			,{"key":"Colpo Terrificante"}
+			,{"key":"Incalzare"}
+			,{"key":"Incalzare Potenziato"}
+			,{"key":"Spingere Migliorato"}
+			,{"key":"Volontà di Ferro"}
+		]
+	}
+}

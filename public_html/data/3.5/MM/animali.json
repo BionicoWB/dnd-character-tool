@@ -1,0 +1,493 @@
+{
+	"Aquila":{
+		"caratteristiche":{ "FORZA":10 , "DESTREZZA":15 , "COSTITUZIONE":12 , "INTELLIGENZA":3 , "SAGGEZZA":14 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":1 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":3 , "VOLO":24 },
+		
+		"taglia" : "PICCOLA",
+		
+		"armaturaNaturale" : 1,
+		
+		"attaccoBase" :0,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":4}}	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":2 , "RIFLESSI":2 , "VOLONTA":0 }
+                
+        ,"talenti":[{"key":"Arma accurata"}]
+	}
+	
+	, "Aquila gigante [NB]":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":17 , "COSTITUZIONE":12 , "INTELLIGENZA":10 , "SAGGEZZA":14 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":4 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":3 , "VOLO":24 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :4,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }
+						
+	}
+
+	, "Balena, capodoglio":{
+		"caratteristiche":{ "FORZA":35 , "DESTREZZA":13 , "COSTITUZIONE":24 , "INTELLIGENZA":3 , "SAGGEZZA":14 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":12 , "tipo":8 },
+		
+		"velocita" :{"NUOTARE":12 },
+		
+		"taglia" : "MASTODONTICA",
+		
+		"armaturaNaturale" : 9,
+		
+		"attaccoBase" :9,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":4,"tipo":6}}
+									                                				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Colpo di coda", "danno":{"numero":1,"tipo":8}}
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":8 , "RIFLESSI":8 , "VOLONTA":4 }
+		
+		, "talenti":[
+				{"key":"Attacco Naturale Migliorato","parameter":["Morso"]}
+				,{"key":"Allerta"}
+				,{"key":"Duro a Morire"}
+				,{"key":"Resistenza Fisica"}
+				,{"key":"Robustezza"}
+			]		
+				
+	}
+
+	, "Balena, fanone":{
+		"caratteristiche":{ "FORZA":35 , "DESTREZZA":13 , "COSTITUZIONE":22 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":12 , "tipo":8 },
+		
+		"velocita" :{"NUOTARE":12 },
+		
+		"taglia" : "MASTODONTICA",
+		
+		"armaturaNaturale" : 9,
+		
+		"attaccoBase" :7,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Colpo di coda", "danno":{"numero":1,"tipo":8}}
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":8 , "RIFLESSI":8 , "VOLONTA":4 }
+		
+		, "talenti":[
+				{"key":"Allerta"}
+				,{"key":"Duro a Morire"}
+				,{"key":"Resistenza Fisica"}
+				,{"key":"Robustezza"}
+				,{"key":"Robustezza"}				
+			]		
+				
+	}
+	
+	, "Coccodrillo gigante":{
+		"caratteristiche":{ "FORZA":27 , "DESTREZZA":12 , "COSTITUZIONE":19 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":2 },
+		
+		"dadiVita":{ "numero":7 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 6 , "NUOTARE": 9},
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :5,
+		
+		"attacchi" :{
+                        "MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":2,"tipo":8}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Colpo di coda", "danno":{"numero":1,"tipo":12}}
+                                ]
+                                                       
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":5 , "RIFLESSI":5 , "VOLONTA":2 }			
+	}
+	
+	, "Elefante":{
+		"caratteristiche":{ "FORZA":30 , "DESTREZZA":10 , "COSTITUZIONE":21 , "INTELLIGENZA":3 , "SAGGEZZA":13 , "CARISMA":7 },
+		
+		"dadiVita":{ "numero":11 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "ENORME",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :8,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Schianto", "danno":{"numero":2,"tipo":8}}
+									,{"naturaArma":"NATURALE", "descrizione":"Zanne", "danno":{"numero":2,"tipo":6}}
+                                ]   
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Pestata", "danno":{"numero":2,"tipo":6}}
+                                ] 								
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":7 , "RIFLESSI":7 , "VOLONTA":4 }		
+		,"talenti":[
+			{"key":"Abilità Focalizzata","parameter":["Ascoltare"]}
+			,{"key":"Allerta"}
+			,{"key":"Resistenza Fisica"}			
+			,{"key":"Volontà di ferro"}
+                ]
+	}
+	
+	, "Ghiottone":{
+		"caratteristiche":{ "FORZA":14 , "DESTREZZA":15 , "COSTITUZIONE":19 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":9 , "SCAVARE":3 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 2,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":6}}	
+                                ]
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":1 }		
+	}
+
+	, "Gorilla":{
+		"caratteristiche":{ "FORZA":21 , "DESTREZZA":15 , "COSTITUZIONE":14 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":7 },
+		
+		"dadiVita":{ "numero":4 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":9 , "SCALARE":9},
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":6}}	
+                                ]
+                        }			
+		}
+		
+		, "tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }					
+                                
+	}	
+	
+	, "Gufo gigante":{
+		"caratteristiche":{ "FORZA":18 , "DESTREZZA":17 , "COSTITUZIONE":12 , "INTELLIGENZA":10 , "SAGGEZZA":14 , "CARISMA":10 },
+		
+		"dadiVita":{ "numero":4 , "tipo":10 },
+		
+		"velocita" :{	"TERRA":3 , "VOLO": 21 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :4,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":6}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }                    
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }		
+	}	
+	
+	, "Leone":{
+		"caratteristiche":{ "FORZA":21 , "DESTREZZA":17 , "COSTITUZIONE":15 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":5 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :3,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8} }	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":4 , "RIFLESSI":4 , "VOLONTA":1 }			
+	}
+	
+	, "Orso nero":{
+		"caratteristiche":{ "FORZA":19 , "DESTREZZA":13 , "COSTITUZIONE":15 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":6 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":12 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}},
+                                    {"naturaArma":"NATURALE",  "descrizione":"Artiglio", "danno":{"numero":1,"tipo":4}}                                    				
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":1 }
+	}
+	
+	, "Piovra gigante":{
+		"caratteristiche":{ "FORZA":20 , "DESTREZZA":15 , "COSTITUZIONE":13 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":3 },
+		
+		"dadiVita":{ "numero":8 , "tipo":8 },
+		
+		"velocita" :{	"TERRA":6,"NUOTARE":9 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 7,
+		
+		"attaccoBase" :6,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+                                    ,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":4}}
+                                ]
+                            ,"SECONDARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}	
+                                ]
+                        }
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":6 , "RIFLESSI":6 , "VOLONTA":2 }
+		,"talenti":[
+			{"key":"Abilità Focalizzata","parameter":["Nascondersi"]}
+			,{"key":"Allerta"}
+			,{"key":"Robustezza"}
+		]
+	}
+	
+	, "Seppia gigante":{
+		"caratteristiche":{ "FORZA":26 , "DESTREZZA":17 , "COSTITUZIONE":13 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":2 },
+		
+		"dadiVita":{ "numero":12 , "tipo":8 },
+		
+		"velocita" :{"NUOTARE": 24},
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 6,
+		
+		"attaccoBase" :9,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+									,{"naturaArma":"NATURALE", "descrizione":"Tentacolo", "danno":{"numero":1,"tipo":6}}
+                                ]
+							,"SECONDARIO":[
+							       {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":2,"tipo":8}}
+							]
+                            
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":8 , "RIFLESSI":8 , "VOLONTA":4 }	
+		,"talenti":[
+			{"key":"Allerta"}
+			,{"key":"Duro a Morire"}
+			,{"key":"Resistenza Fisica"}
+			,{"key":"Robustezza"}
+			,{"key":"Robustezza"}
+		]
+	}	
+	
+	, "Serpente strangolatore":{
+		"caratteristiche":{ "FORZA":17 , "DESTREZZA":17 , "COSTITUZIONE":13 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":2 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 6 , "SCALARE" : 6 , "NUOTARE": 6 },
+		
+		"taglia" : "MEDIA",
+		
+		"armaturaNaturale" : 2,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":3}}                                   				
+                                ]
+                            
+                        }			
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":1 }					
+	}
+	
+	, "Serpente, vipera grande":{
+		"caratteristiche":{ "FORZA":10 , "DESTREZZA":17 , "COSTITUZIONE":11 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":2 },
+		
+		"dadiVita":{ "numero":3 , "tipo":8 },
+		
+		"velocita" :{	"TERRA": 6 , "SCALARE" : 6 , "NUOTARE": 6 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 3,
+		
+		"attaccoBase" :2,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":4}}                                   				
+                                ]
+                            
+                        }                    			
+		}
+                
+        ,"talenti":[{"key":"Arma accurata"}]
+		
+		,"tiriSalvezza":{ "TEMPRA":3 , "RIFLESSI":3 , "VOLONTA":1 }					
+	}
+	
+	, "Squalo grande":{
+		"caratteristiche":{ "FORZA":17 , "DESTREZZA":15 , "COSTITUZIONE":13 , "INTELLIGENZA":3 , "SAGGEZZA":12 , "CARISMA":2 },
+		
+		"dadiVita":{ "numero":7 , "tipo":8 },
+		
+		"velocita" :{	"NUOTARE": 18 },
+		
+		"taglia" : "GRANDE",
+		
+		"armaturaNaturale" : 4,
+		
+		"attaccoBase" :5,
+		
+		"attacchi" :{
+			"MISCHIA" : {
+                            "PRIMARIO":[
+                                    {"naturaArma":"NATURALE", "descrizione":"Morso", "danno":{"numero":1,"tipo":8}}      
+                                ]
+                                                       
+                        }                     		
+		},
+		
+		"tiriSalvezza":{ "TEMPRA":7 , "RIFLESSI":5 , "VOLONTA":2 }
+	}	
+	
+	
+}
