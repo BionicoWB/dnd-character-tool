@@ -1,3 +1,5 @@
+/* global CreatureManager, Caratteristica, TiroSalvezza, TipoAttacco, LivelloAttacco */
+
 function Creature(basicObject) {
 
     if(typeof basicObject === 'string'){
@@ -174,7 +176,7 @@ function Creature(basicObject) {
     
     /**
      * 
-     * @param {TiroSalvezza} tiroSalvezza
+     * @param {String} tiroSalvezza
      * @returns {undefined}
      */
     this.getTiroSalvezza = function(tiroSalvezza){
@@ -190,12 +192,12 @@ function Creature(basicObject) {
             }
             , bonus : {}
             /**
-                    * 
-                    * @param {String} source - l'elemento che fornisce il bonus (talento, oggetto, incantesimo etc..)
-                    * @param {TipoBonus} tipoBonus
-                    * @param {Integer} valore
-                    * @returns {undefined}
-                    */
+            * 
+            * @param {String} source - l'elemento che fornisce il bonus (talento, oggetto, incantesimo etc..)
+            * @param {TipoBonus} tipoBonus
+            * @param {Integer} value
+            * @returns {undefined}
+            */
             , addBonus : function(tipoBonus, source, value){
                 if(!this.bonus[tipoBonus]){
                     this.bonus[tipoBonus] = [{source: source, value: value}];
@@ -207,9 +209,9 @@ function Creature(basicObject) {
                 return this.base;
             }
             /**
-                    * per ogni tipo di bonus recupero il valore maggiore e lo sommo al dato base ed al modificatorei di caratteristica
-                    * @returns {undefined}
-                    */
+            * per ogni tipo di bonus recupero il valore maggiore e lo sommo al dato base ed al modificatore di caratteristica
+            * @returns {undefined}
+            */
             , getValore : function(){
                 var totale = this.base + this.caratteristica.value;
                 

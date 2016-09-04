@@ -11,7 +11,7 @@ var ProfileManager = {
             , manuali:[]
         };
 
-        var profilo = $.extend(true, struct, profilo);
+        profilo = $.extend(true, struct, profilo);
                 
         ProfileManager.definizioni[profilo.key] = profilo;        
     }

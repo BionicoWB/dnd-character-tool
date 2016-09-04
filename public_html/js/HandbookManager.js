@@ -14,7 +14,7 @@ var HandbookManager = {
             , plugins : []
         };
 
-        var manuale = $.extend(true, struct, manuale);
+        manuale = $.extend(true, struct, manuale);
                 
         HandbookManager.definizioni[manuale.key] = manuale;                
     }
