@@ -24,7 +24,7 @@ function Collection(){
 
     this.values = function() {
         var values = [];
-        for (key in this.data) {            
+        for (var key in this.data) {            
             values.push(this.data[key]);
         }
         return values;
@@ -42,7 +42,7 @@ function Collection(){
 
         var result = new Collection();
 
-        for (key in this.data) {
+        for (var key in this.data) {
             if (fun(key, this.data[key])) {
                 result.put(key, this.data[key]);
             }
